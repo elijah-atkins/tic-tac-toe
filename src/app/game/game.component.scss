@@ -59,4 +59,26 @@ p {
         }
     }
 }
+
 }
+footer {
+    background-color: #222;
+
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 0.2rem;
+    color: #aaa;
+
+    height: 1.8rem;
+    font-size: 1.3rem;
+    z-index: 12;
+    text-align: right;
+    padding-right: 1rem;
+
+    user-select: none;
+    a {
+        text-decoration: none;
+    }
+  }
