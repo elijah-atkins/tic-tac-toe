@@ -12,12 +12,13 @@ import { MatButtonModule } from '@angular/material/button'
   declarations: [
     AppComponent,
     GameComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

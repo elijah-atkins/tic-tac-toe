@@ -1,37 +1,111 @@
-<header><h1 class="mat-display-2" style="font-weight: 900; margin: 15px 0;">Tic Tac Toe</h1></header>
+<header>
+  <h1 class="mat-display-2" style="font-weight: 900; margin: 15px 0">
+    Tic Tac Toe
+  </h1>
+</header>
 <div class="main-container">
-    <div class="field">
-        <p  class="current-status mat-display-1">Welcome to Tic Tac Toe</p>
+  <div class="field">
+    <p class="current-status mat-body-2 intro">Welcome to Tic Tac Toe. Hit the Start New Game button and I'll randomly decide who goes first.</p>
+  </div>
+  <div
+    *ngIf="this.game.gameStatus === 0"
+    class="field d-flex justify-content-center"
+    style="width: 100%"
+  >
+    <button
+      (click)="startGame()"
+      mat-raised-button
+      color="primary"
+      class="start-game-button"
+    >
+      Start New Game
+    </button>
+  </div>
+  <div *ngIf="this.game.gameStatus === 1" class="game-board">
+    <div class="players player-one align-self-center">
+      <div class="spacer" style="width: 50px;"></div>
+      <p
+        *ngIf="this.game.currentTurn === 1"
+        class="mat-display-2"
+        style="font-weight: 700; margin: 0 0 0 5px"
+      >
+        X
+      </p>
     </div>
-    <div *ngIf="this.game.gameStatus === 0" class="field d-flex justify-content-center" style="width: 100%;">
-        <button (click)="startGame()" mat-raised-button color="primary" class="start-game-button">Start New Game</button>
+    <div class="game-field container-fluid">
+      <div class="row">
+        <div
+          (click)="clickSubField($event)"
+          position="0"
+          class="subfield col-4"
+        ></div>
+        <div
+          (click)="clickSubField($event)"
+          position="1"
+          class="subfield col-4"
+        ></div>
+        <div
+          (click)="clickSubField($event)"
+          position="2"
+          class="subfield col-4"
+        ></div>
+      </div>
+      <div class="row">
+        <div
+          (click)="clickSubField($event)"
+          position="3"
+          class="subfield col-4"
+        ></div>
+        <div
+          (click)="clickSubField($event)"
+          position="4"
+          class="subfield col-4"
+        ></div>
+        <div
+          (click)="clickSubField($event)"
+          position="5"
+          class="subfield col-4"
+        ></div>
+      </div>
+      <div class="row">
+        <div
+          (click)="clickSubField($event)"
+          position="6"
+          class="subfield col-4"
+        ></div>
+        <div
+          (click)="clickSubField($event)"
+          position="7"
+          class="subfield col-4"
+        ></div>
+        <div
+          (click)="clickSubField($event)"
+          position="8"
+          class="subfield col-4"
+        ></div>
+      </div>
     </div>
-    <div *ngIf="this.game.gameStatus === 1" class="game-board">
-        <div class="players player-one align-self-flex-start">
-            <p class="mat-display-2" style="font-weight: 700; margin: 0 0 0 5px;"></p></div>
-        <div class="game-field container-fluid">
-            <div class="row">
-
-                <div (click)="clickSubField($event)" position="0" class="subfield col-4"></div>
-                <div (click)="clickSubField($event)" position="1" class="subfield col-4"></div>
-                <div (click)="clickSubField($event)" position="2" class="subfield col-4"></div>
-            </div>
-            <div class="row">
-                <div (click)="clickSubField($event)" position="3" class="subfield col-4"></div>
-                <div (click)="clickSubField($event)" position="4" class="subfield col-4"></div>
-                <div (click)="clickSubField($event)" position="5" class="subfield col-4"></div>
-            </div>
-            <div class="row">
-                <div (click)="clickSubField($event)" position="6" class="subfield col-4"></div>
-                <div (click)="clickSubField($event)" position="7" class="subfield col-4"></div>
-                <div (click)="clickSubField($event)" position="8" class="subfield col-4"></div>
-            </div>
-        </div>
-<div class="players player-two align-self-flex-start"><p class="mat-display-2" style="font-weight: 700; margin: 0 10px 0 0;"></p></div>
+    <div class="players player-two align-self-center">
+      <div class="spacer" style="width: 50px;"></div>
+      <p
+        *ngIf="this.game.currentTurn === 2"
+        class="mat-display-2"
+        style="font-weight: 700; margin: 0 10px 0 0"
+      >
+        O
+      </p>
     </div>
-
+  </div>
 </div>
 <footer className="footer">
-    <p>Copyright © 2020 <a href="https://elijahatkins.com/"                 target="_blank"
-        rel="noopener noreferrer" alt="Elijah Atkins dot com">Elijah Atkins</a></p>
+  <p>
+    Copyright © 2020
+    <a
+      href="https://elijahatkins.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      alt="Elijah Atkins dot com"
+      >Elijah Atkins</a
+    >
+  </p>
 </footer>

@@ -16,3 +16,4 @@ My first Angular app made with Angular CLI, utilizing Angular Materials and Boot
     - [x] Stop selection of occupied tiles
     - [x] Allow for win when more than 3 of the same tile already exist
     - [x] last move can end with one side winning or a draw
+- [ ] Add color to turn label

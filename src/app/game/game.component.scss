@@ -6,16 +6,19 @@ header {
 
 }
 .main-container {
-p {
+
+.intro {
     color: #eee;
     width: 100%;
+    padding: 0 10vw;
     text-align: center;
+    font-size: calc(15px + 1vh);
   }
 
 .game-board{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     .player-one {
         p {
             color: #3d3;
@@ -60,6 +63,9 @@ p {
     }
 }
 
+}
+.disabled {
+    opacity: 0;
 }
 footer {
     background-color: #222;
