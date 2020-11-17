@@ -1,10 +1,10 @@
 <header><h1 class="mat-display-2" style="font-weight: 900; margin: 15px 0;">Tic Tac Toe</h1></header>
 <div class="main-container">
     <div class="field">
-        <p  class="current-status mat-display-1">Hit the button to start the game</p>
+        <p  class="current-status mat-display-1">Welcome to Tic Tac Toe</p>
     </div>
     <div *ngIf="this.game.gameStatus === 0" class="field d-flex justify-content-center" style="width: 100%;">
-        <button (click)="startGame()" mat-raised-button color="primary" class="start-game-button">Start Game Now</button>
+        <button (click)="startGame()" mat-raised-button color="primary" class="start-game-button">Start New Game</button>
     </div>
     <div *ngIf="this.game.gameStatus === 1" class="game-board">
         <div class="players player-one align-self-flex-start">
