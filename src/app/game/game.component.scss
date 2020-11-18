@@ -18,7 +18,7 @@ header {
 .game-board{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     .player-one {
         p {
             color: #3d3;
@@ -62,7 +62,32 @@ header {
         }
     }
 }
+.player-one-icon {
 
+    user-select: none;
+    position: fixed;
+    left: 2vw;
+    top:260px;
+    background-position: center;
+    background-size: 80% 80%;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin: 0;
+    background-image: linear-gradient(45deg, transparent 41%, #3d3 42%, #3d3 60%, transparent 61%), linear-gradient(-45deg, transparent 40%, #3d3 41%, #3d3 60%, transparent 61%);
+}
+.player-two-icon {
+
+    user-select: none;
+    position: fixed;
+    right: 2vw;
+    top:260px;
+    background-position: center;
+    background-size: 90% 90%;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin: 0;
+    background-image: radial-gradient(transparent 33%, #d33 35%, #d33 68%, transparent 70%);
+}
 }
 .disabled {
     opacity: 0;

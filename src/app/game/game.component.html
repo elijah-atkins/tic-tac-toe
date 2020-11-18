@@ -5,7 +5,10 @@
 </header>
 <div class="main-container">
   <div class="field">
-    <p class="current-status mat-body-2 intro">Welcome to Tic Tac Toe. Hit the Start New Game button and I'll randomly decide who goes first.</p>
+    <p class="current-status mat-body-2 intro">
+      Welcome to Tic Tac Toe. Hit the Start New Game button and I'll randomly
+      decide who goes first.
+    </p>
   </div>
   <div
     *ngIf="this.game.gameStatus === 0"
@@ -22,15 +25,14 @@
     </button>
   </div>
   <div *ngIf="this.game.gameStatus === 1" class="game-board">
-    <div class="players player-one align-self-center">
-      <div class="spacer" style="width: 50px;"></div>
-      <p
+    <div class="players align-self-center" style="width: 80px">
+      <div
+        style="width: 70px; height: 70px"
         *ngIf="this.game.currentTurn === 1"
-        class="mat-display-2"
-        style="font-weight: 700; margin: 0 0 0 5px"
+        class="players player-one-icon align-self-center"
       >
-        X
-      </p>
+        " "
+      </div>
     </div>
     <div class="game-field container-fluid">
       <div class="row">
@@ -85,27 +87,26 @@
         ></div>
       </div>
     </div>
-    <div class="players player-two align-self-center">
-      <div class="spacer" style="width: 50px;"></div>
-      <p
+    <div class="players align-self-center" style="width: 70px">
+      <div
+        style="width: 70px; height: 70px"
         *ngIf="this.game.currentTurn === 2"
-        class="mat-display-2"
-        style="font-weight: 700; margin: 0 10px 0 0"
+        class="players player-two-icon align-self-center"
       >
-        O
-      </p>
+        " "
+      </div>
     </div>
   </div>
+  <footer className="footer">
+    <p>
+      Copyright © 2020
+      <a
+        href="https://elijahatkins.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        alt="Elijah Atkins dot com"
+        >Elijah Atkins</a
+      >
+    </p>
+  </footer>
 </div>
-<footer className="footer">
-  <p>
-    Copyright © 2020
-    <a
-      href="https://elijahatkins.com/"
-      target="_blank"
-      rel="noopener noreferrer"
-      alt="Elijah Atkins dot com"
-      >Elijah Atkins</a
-    >
-  </p>
-</footer>
