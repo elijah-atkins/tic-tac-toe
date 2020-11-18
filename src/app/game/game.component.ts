@@ -16,7 +16,7 @@ export class GameComponent implements OnInit {
 
   startGame(): void {
     this.game.gameStart();
-    const currentPlayer = (this.game.currentTurn === 1 ? "X" : "O") + "'s turn";
+    const currentPlayer = (this.game.currentTurn === 1 ? "X" : "O") + "'s will go first";
     const information = document.querySelector(".current-status");
     if (information?.innerHTML) {
       information.innerHTML = currentPlayer;

@@ -70,7 +70,7 @@ export class GameLogic {
 
 
         if (isWinner) {
-            this.winner = (this.currentTurn === 1 ? "X wins!":"O wins!")
+            this.winner = (this.currentTurn === 1 ? "X's win!":"O's win!")
             this.gameEnd();
             return true;
         }
