@@ -33,13 +33,14 @@ header {
     .game-field {
         margin: 2rem;
 
-        max-width: 300px;
+
+
         .subfield {
             cursor: pointer;
             position: relative;
             z-index: 10;
-            height: 100px;
-            width: 100px;
+            width: 100%;
+            padding-top: 33%;
             border: 1px solid #aaa;
 
             
@@ -67,7 +68,7 @@ header {
     user-select: none;
     position: fixed;
     left: 2vw;
-    top:260px;
+    top:calc(40px + 50vw);
     background-position: center;
     background-size: 80% 80%;
     background-repeat: no-repeat;
@@ -80,7 +81,7 @@ header {
     user-select: none;
     position: fixed;
     right: 2vw;
-    top:260px;
+    top:calc(40px + 50vw);
     background-position: center;
     background-size: 90% 90%;
     background-repeat: no-repeat;
